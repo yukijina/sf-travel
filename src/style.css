@@ -1,6 +1,10 @@
 :root {
   --white: #fefefe;
+  --grey-0: #f8f9fa;
+  --grey-1: #f1f3f5;
+  --grey-2: #ced4da;
   --grey-9: #212529;
+
   --purple: ;
   --purple-dark: #272044;
 }
@@ -90,14 +94,86 @@ a {
   transform: translateY(0.2rem);
 }
 
+/* ******** Footer ******** */
+footer {
+  background-image: linear-gradient(
+      rgba(39, 32, 68, 0.95),
+      rgba(39, 32, 68, 0.6)
+    ),
+    url(/images/painted-lady.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 33rem;
+  padding: 8rem 4rem 0 4rem;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-1-2-2 {
+  grid-template-columns: 1fr 2fr 2fr;
+  gap: 1.6rem;
+}
+
+.heading-3-footer {
+  font-size: 2rem;
+  color: var(--white);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.footer-list {
+  list-style: none;
+}
+
+.footer-link,
+.footer-link:link,
+.footer-link:visited,
+.footer-link:active {
+  text-decoration: none;
+  color: var(--grey-2);
+  font-size: 1.6rem;
+}
+
+.footer-link:hover {
+  color: var(--white);
+}
+
+.footer-text {
+  color: var(--grey-2);
+  font-size: 1.6rem;
+}
+
+.text--small {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.acknowledgement {
+  margin-top: 6rem;
+}
+
+/* ******** Media quary******** */
+/* 1200px */
 @media (max-width: 75rem) {
+  .acknowledgement {
+    margin-top: 4rem;
+  }
+
   html {
     font-size: 56.25%;
   }
 }
 
+/* 900px */
 @media (max-width: 56.25rem) {
   html {
     font-size: 50%;
+  }
+
+  .grid-1-2-2 {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
